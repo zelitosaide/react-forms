@@ -1,0 +1,26 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.33);
+}
+
+.content {
+  position: relative;
+  background: white;
+  width: 20rem;
+  margin: 80px auto 0;
+  padding: 1rem;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: red;
+  padding: 0;
+  display: inline-block;
+}

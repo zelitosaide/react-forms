@@ -1,0 +1,22 @@
+.fieldset {
+  border: 1px solid #ccc; 
+  background: white;
+  border-radius: 0.3rem;
+  margin: 0.5rem;
+}
+
+.fieldset legend {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #555;
+  padding: 0.5rem;
+  background: #E9E9ED;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: normal;
+  margin-left: 0.5rem;
+  margin-top: -0.3rem;
+}
