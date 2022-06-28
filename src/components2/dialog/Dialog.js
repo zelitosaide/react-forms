@@ -1,18 +1,14 @@
-import { useState } from 'react'
+import Column from '../column/Column'
+import { WarnIcon } from '../icons/icons'
+import Input from '../input/Input'
+import Modal from '../modal/Modal'
+import Row from '../row/Row'
+import styles from './Dialog.module.css'
 
-import Modal from '../components2/modal/Modal'
-import Row from '../components2/row/Row'
-import Column from '../components2/column/Column'
-import { WarnIcon } from '../components2/icons/icons'
-
-const Home = () => {
-  const [visible, setVisible] = useState(false)
-
+const Dialog = ({ visible, setVisible, type, ...props }) => {
   return (
-    <div style={{ paddingTop: '50px' }}>
-      <button onClick={() => setVisible(true)}>Open Modal</button>
-
-      <Modal visible={visible} setVisible={setVisible} backdrop>
+    <div className={styles.dialog}>
+      <Modal {...props} visible={visible} setVisible={setVisible}>
         <Row>
           <Column style={{ width: '2.5rem' }}>
             <div
@@ -29,7 +25,7 @@ const Home = () => {
               <WarnIcon style={{ width: '1.5rem', color: 'rgb(220 38 38)' }} />
             </div>
           </Column>
-          <Column style={{ width: 'calc(100% - 2.5rem)', }}>
+          <Column style={{ width: 'calc(100% - 2.5rem)' }}>
             <div style={{ paddingLeft: '1rem' }}>
               <h3
                 style={{
@@ -51,16 +47,18 @@ const Home = () => {
               >
                 Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.
               </p>
+              <Input style={{ display: 'inline-block', paddingLeft: 0 }}>
+                <button type='button'>Deactivate</button>
+              </Input>
+              <Input style={{ display: 'inline-block' }}>
+                <button onClick={() => setVisible(false)} type='button'>Cancel</button>
+              </Input>
             </div>
           </Column>
         </Row>
-
-
-        <button>Cancel</button>
-        <button>Deactivate</button>
       </Modal>
     </div>
   )
 }
 
-export default Home
+export default Dialog
