@@ -15,14 +15,17 @@ const Dialog = ({ visible, setVisible, type, ...props }) => {
               style={{
                 width: '2.5rem',
                 height: '2.5rem',
-                background: 'rgb(254 226 226)',
+                // background: 'rgb(254 226 226)',
+                background: '#FDECE4',
                 borderRadius: 'calc(2.5rem / 2)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
             >
-              <WarnIcon style={{ width: '1.5rem', color: 'rgb(220 38 38)' }} />
+              {/* <WarnIcon style={{ width: '1.5rem', color: 'rgb(220 38 38)' }} /> */}
+              {/* <WarnIcon style={{ width: '1.5rem', color: 'hsl(21, 89%, 56%)' }} /> */}
+              <WarnIcon style={{ width: '1.5rem', color: '#f15d0e' }} />
             </div>
           </Column>
           <Column style={{ width: 'calc(100% - 2.5rem)' }}>
