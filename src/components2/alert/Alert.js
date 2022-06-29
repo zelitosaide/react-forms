@@ -4,10 +4,10 @@ import { TimesIcon } from '../icons/icons'
 import styles from './Alert.module.css'
 
 const Alert = ({ children, visible, setVisible, ...props }) => {
-  setTimeout(() => {
+  setTimeout(() => { 
     // setMessages((prevMessages) => prevMessages.slice(1)); 
   }, 5000)
-
+  
   return (
     <AnimatePresence>
       {visible && (
@@ -28,7 +28,7 @@ const Alert = ({ children, visible, setVisible, ...props }) => {
           }}
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 20 }}
+          exit={{ opacity: 0, x: 100 }}
           transition={{ type: 'tween' }}
         >
           <TimesIcon onClick={() => setVisible(false)} className={styles.close} />

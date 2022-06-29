@@ -57,6 +57,13 @@ const App = () => {
   const [visible, setVisible] = useState(false)
   const [openNotification, setOpenNotification] = useState(false)
 
+  const openAndAutoClose = () => {
+    setOpenNotification(true)
+    setTimeout(() => {
+      setOpenNotification(false)
+    }, 6000)
+  }
+
   const onSubmit = (data) => {
     console.log(data)
   }
@@ -487,7 +494,7 @@ const App = () => {
 
           <Fieldset label='Notification'>
             <Input>
-              <button onClick={() => setOpenNotification(true)} type='button'>Open Notification</button>
+              <button onClick={openAndAutoClose} type='button'>Open Notification</button>
             </Input>
             <Notification
               visible={openNotification}
