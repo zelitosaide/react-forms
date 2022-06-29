@@ -1,0 +1,12 @@
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.1rem;
+  width: 1rem;
+  height: 1rem;
+  color: #64748b;
+  cursor: pointer;
+  /* background: red; */
+  border-radius: calc(1.45rem / 2);
+}

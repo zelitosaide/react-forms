@@ -26,8 +26,9 @@ import Section from './components2/section/Section'
 import Column from './components2/column/Column'
 import Input from './components2/input/Input'
 import Fieldset from './components2/fieldset/Fieldset'
-import Dialog from './components2/dialog/Dialog'
+import Dialog from './components2/__dialog/Dialog'
 import { useState } from 'react'
+import Notification from './components2/__notification/Notification'
 
 const App = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm({
@@ -54,6 +55,7 @@ const App = () => {
     }
   })
   const [visible, setVisible] = useState(false)
+  const [openNotification, setOpenNotification] = useState(false)
 
   const onSubmit = (data) => {
     console.log(data)
@@ -479,10 +481,21 @@ const App = () => {
             <Dialog
               visible={visible}
               setVisible={setVisible}
-              type='warn'
-              // backdrop
+              type='warn' // backdrop
             />
           </Fieldset>
+
+          <Fieldset label='Notification'>
+            <Input>
+              <button onClick={() => setOpenNotification(true)} type='button'>Open Notification</button>
+            </Input>
+            <Notification
+              visible={openNotification}
+              setVisible={setOpenNotification}
+            />
+          </Fieldset>
+
+
         </Section>
       </Section>
     </form >
