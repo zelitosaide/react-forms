@@ -26,10 +26,10 @@ const Alert = ({ children, visible, setVisible, ...props }) => {
             bottom: props.style?.bottom,
             ...props.style,
           }}
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: 500 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ type: 'tween' }}
+          exit={{ opacity: 0, x: 500 }}
+          transition={{ type: 'tween', duration: 0.5 }}
         >
           <TimesIcon onClick={() => setVisible(false)} className={styles.close} />
           {children}
