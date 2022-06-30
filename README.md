@@ -1,15 +1,16 @@
+### `some resources that I used`
 
-# #f3722c
-# https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes
-# https://codepen.io/kevinpowell/pen/gORbbWr
-# https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
-# https://www.w3schools.com/colors/colors_picker.asp
-# https://getbootstrap.com/docs/5.0/forms/validation/
+color: `#f3722c`
+https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes
+https://codepen.io/kevinpowell/pen/gORbbWr
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
+https://www.w3schools.com/colors/colors_picker.asp
+https://getbootstrap.com/docs/5.0/forms/validation/
 
-# https://www.fotor.com/features/crop
-# https://react.school/ui/input
+https://www.fotor.com/features/crop
+https://react.school/ui/input
 
-# https://tailwindui.com/
+https://tailwindui.com/
 
 
 
