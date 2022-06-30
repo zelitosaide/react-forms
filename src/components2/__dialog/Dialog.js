@@ -54,7 +54,13 @@ const Dialog = ({ visible, setVisible, type, ...props }) => {
                 <button type='button'>Deactivate</button>
               </Input>
               <Input style={{ display: 'inline-block' }}>
-                <button onClick={() => setVisible(false)} type='button'>Cancel</button>
+                <button
+                  onClick={() => setVisible(false)}
+                  type='button'
+                  style={{ background: '#fff', color: '#333', border: '1px solid #ccc' }}
+                >
+                  Cancel
+                </button>
               </Input>
             </div>
           </Column>

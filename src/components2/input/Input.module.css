@@ -50,7 +50,8 @@
   padding: 0.4rem 1rem;
   border-radius: 0.3rem;
   font-size: 1rem;
-  background: #f3722c;
+  /* background: #f3722c; */
+  background: var(--bgColor);
   cursor: pointer;
   text-transform: capitalize;
   color: #fff;
@@ -68,11 +69,13 @@
 }
 
 .child button:hover {
-  background: #f15d0e;
+  /* background: #f15d0e; */
+  background: var(--bgHover);
 }
 
 .child button:active {
-  background: #d9540d;
+  /* background: #d9540d; */
+  background: var(--bgActive);
 }
 
 /* Checkbox */

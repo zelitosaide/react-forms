@@ -1,10 +1,23 @@
 import styles from './Input.module.css'
 
 const Input = ({ children, label, error, ...props }) => {
-  const type = children?.props.type
+  const type = children?.props?.type
+
+  const bgColor = props?.style?.['--bgColor'] || '#f3722c'
+  const bgHover = props?.style?.['--bgHover'] || '#f15d0e'
+  const bgActive = props?.style?.['--bgActive'] || '#d9540d'
 
   return (
-    <div {...props} style={{ ...props.style }} className={styles.input}>
+    <div
+      {...props}
+      style={{
+        ...props.style,
+        '--bgColor': bgColor,
+        '--bgHover': bgHover,
+        '--bgActive': bgActive
+      }}
+      className={styles.input}
+    >
       {type === 'checkbox' ? (
         <>
           <span className={styles.checkbox}>{children}</span>

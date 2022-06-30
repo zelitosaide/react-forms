@@ -29,6 +29,8 @@ import Fieldset from './components2/fieldset/Fieldset'
 import Dialog from './components2/__dialog/Dialog'
 import { useState } from 'react'
 import Notification from './components2/__notification/Notification'
+import IconButton from './components2/__icon_button/IconButton'
+import OutlineButton from './components2/__outline_button/OutlineButton'
 
 const App = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm({
@@ -501,6 +503,15 @@ const App = () => {
               setVisible={setOpenNotification}
             />
           </Fieldset>
+
+
+
+          <Fieldset label='Buttons'>
+            <IconButton />
+            <OutlineButton />
+          </Fieldset>
+
+
 
 
         </Section>

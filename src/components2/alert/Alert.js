@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 import { TimesIcon } from '../icons/icons'
 import styles from './Alert.module.css'
+import IconButton from '../__icon_button/IconButton'
 
 const Alert = ({ children, visible, setVisible, ...props }) => {
   setTimeout(() => { 
@@ -31,7 +32,8 @@ const Alert = ({ children, visible, setVisible, ...props }) => {
           exit={{ opacity: 0, x: 500 }}
           transition={{ type: 'tween', duration: 0.5 }}
         >
-          <TimesIcon onClick={() => setVisible(false)} className={styles.close} />
+          {/* <TimesIcon onClick={() => setVisible(false)} className={styles.close} /> */}
+          <IconButton onClick={() => setVisible(false)} className={styles.close} />
           {children}
         </motion.div>
       )}
